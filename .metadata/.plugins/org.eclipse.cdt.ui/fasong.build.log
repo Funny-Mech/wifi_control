@@ -1,17 +1,17 @@
-12:46:55 **** Incremental Build of configuration Debug for project fasong ****
+13:03:17 **** Incremental Build of configuration Debug for project fasong ****
 make -j20 all 
-arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "fasong.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\11433\Desktop\target_vehicle_control code\fasong\fasong\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fasong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: fasong.elf
  
 arm-none-eabi-size  fasong.elf 
 arm-none-eabi-objdump -h -S fasong.elf  > "fasong.list"
    text	   data	    bss	    dec	    hex	filename
-  36844	    108	   2564	  39516	   9a5c	fasong.elf
+  41280	     28	   4300	  45608	   b228	fasong.elf
 Finished building: default.size.stdout
  
 Finished building: fasong.list
  
 
-12:46:57 Build Finished. 0 errors, 0 warnings. (took 1s.977ms)
+13:03:18 Build Finished. 0 errors, 0 warnings. (took 1s.9ms)
 

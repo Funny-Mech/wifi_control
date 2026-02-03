@@ -3114,3 +3114,263 @@ Finished building: default.size.stdout
  
 Finished building: fasong.list
  
+12:59:25 **** Incremental Build of configuration Debug for project fasong ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/adc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc.d" -MT"Core/Src/adc.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/adc.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/lcd_fonts.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcd_fonts.d" -MT"Core/Src/lcd_fonts.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lcd_fonts.o"
+arm-none-eabi-gcc "../Core/Src/lcd_spi_200.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcd_spi_200.d" -MT"Core/Src/lcd_spi_200.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lcd_spi_200.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32h7xx.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32h7xx.d" -MT"Core/Src/system_stm32h7xx.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32h7xx.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:113:11: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  113 |           printf("this is test");
+      |           ^~~~~~
+../Core/Src/main.c:25:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   24 | #include "gpio.h"
+  +++ |+#include <stdio.h>
+   25 | 
+../Core/Src/main.c:113:11: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  113 |           printf("this is test");
+      |           ^~~~~~
+../Core/Src/main.c:113:11: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/lcd_spi_200.c: In function 'SPI_LCD_Init':
+../Core/Src/lcd_spi_200.c:144:4: warning: implicit declaration of function 'MX_SPI6_Init'; did you mean 'HAL_SPI_Init'? [-Wimplicit-function-declaration]
+  144 |    MX_SPI6_Init();               // 初始化SPI和控制引脚
+      |    ^~~~~~~~~~~~
+      |    HAL_SPI_Init
+../Core/Src/lcd_spi_200.c: In function 'LCD_DisplayNumber':
+../Core/Src/lcd_spi_200.c:708:17: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  708 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:25:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   24 | #include "lcd_spi_200.h"
+  +++ |+#include <stdio.h>
+   25 | 
+../Core/Src/lcd_spi_200.c:708:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  708 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:708:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/lcd_spi_200.c:708:42: warning: '0' flag ignored with precision and '%d' gnu_printf format [-Wformat=]
+  708 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                                          ^~~~~~~
+../Core/Src/lcd_spi_200.c:708:47: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32_t' {aka 'long int'} [-Wformat=]
+  708 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                                           ~~~~^       ~~~~~~
+      |                                               |       |
+      |                                               int     int32_t {aka long int}
+      |                                           %0.*ld
+../Core/Src/lcd_spi_200.c:712:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  712 |                 sprintf( Number_Buffer , "%*d",len, number );   // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:712:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/lcd_spi_200.c:712:45: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32_t' {aka 'long int'} [-Wformat=]
+  712 |                 sprintf( Number_Buffer , "%*d",len, number );   // 将 number 转换成字符串，便于显示
+      |                                           ~~^       ~~~~~~
+      |                                             |       |
+      |                                             int     int32_t {aka long int}
+      |                                           %*ld
+../Core/Src/lcd_spi_200.c: In function 'LCD_DisplayDecimals':
+../Core/Src/spi.c: In function 'MX_SPI6_Init':
+../Core/Src/lcd_spi_200.c:749:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  749 |                 sprintf( Number_Buffer , "%0*.*lf",len,decs, decimals );        // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:749:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/spi.c:39:9: error: 'LCD_SPI' undeclared (first use in this function)
+   39 |         LCD_SPI.Instance                                                                        = SPI6;                                                                                         //      使用SPI
+      |         ^~~~~~~
+../Core/Src/spi.c:39:9: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/lcd_spi_200.c:753:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  753 |                 sprintf( Number_Buffer , "%*.*lf",len,decs, decimals ); // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:753:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/spi.c: In function 'HAL_SPI_MspInit':
+../Core/Src/spi.c:78:17: error: 'GPIO_LDC_Backlight_CLK_ENABLE' undeclared (first use in this function)
+   78 |                 GPIO_LDC_Backlight_CLK_ENABLE;   // 使能 背光        引脚时钟
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/spi.c:79:17: error: 'GPIO_LDC_DC_CLK_ENABLE' undeclared (first use in this function)
+   79 |                 GPIO_LDC_DC_CLK_ENABLE;          // 使能 数据指令选择 引脚时钟
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/spi.c:99:59: error: 'LCD_Backlight_PIN' undeclared (first use in this function)
+   99 |                         GPIO_InitStruct.Pin             = LCD_Backlight_PIN;                            // 背光 引脚
+      |                                                           ^~~~~~~~~~~~~~~~~
+../Core/Src/spi.c:103:39: error: 'LCD_Backlight_PORT' undeclared (first use in this function)
+  103 |                         HAL_GPIO_Init(LCD_Backlight_PORT, &GPIO_InitStruct);    // 初始化
+      |                                       ^~~~~~~~~~~~~~~~~~
+../Core/Src/spi.c:106:59: error: 'LCD_DC_PIN' undeclared (first use in this function)
+  106 |                         GPIO_InitStruct.Pin             = LCD_DC_PIN;                                 // 数据指令选择 引脚
+      |                                                           ^~~~~~~~~~
+../Core/Src/spi.c:110:39: error: 'LCD_DC_PORT' undeclared (first use in this function)
+  110 |                         HAL_GPIO_Init(LCD_DC_PORT, &GPIO_InitStruct);         // 初始化
+      |                                       ^~~~~~~~~~~
+../Core/Src/spi.c:72:28: warning: unused variable 'PeriphClkInitStruct' [-Wunused-variable]
+   72 |   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+      |                            ^~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/spi.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+13:00:01 **** Incremental Build of configuration Debug for project fasong ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/lcd_spi_200.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcd_spi_200.d" -MT"Core/Src/lcd_spi_200.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lcd_spi_200.o"
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+../Core/Src/lcd_spi_200.c: In function 'LCD_DisplayNumber':
+../Core/Src/lcd_spi_200.c:708:17: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  708 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:26:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   25 | #include "spi.h"
+  +++ |+#include <stdio.h>
+   26 | extern SPI_HandleTypeDef hspi6;                 // SPI_HandleTypeDef 结构体变量
+../Core/Src/lcd_spi_200.c:708:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  708 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:708:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/lcd_spi_200.c:708:42: warning: '0' flag ignored with precision and '%d' gnu_printf format [-Wformat=]
+  708 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                                          ^~~~~~~
+../Core/Src/lcd_spi_200.c:708:47: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32_t' {aka 'long int'} [-Wformat=]
+  708 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                                           ~~~~^       ~~~~~~
+      |                                               |       |
+      |                                               int     int32_t {aka long int}
+      |                                           %0.*ld
+../Core/Src/lcd_spi_200.c:712:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  712 |                 sprintf( Number_Buffer , "%*d",len, number );   // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:712:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/lcd_spi_200.c:712:45: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32_t' {aka 'long int'} [-Wformat=]
+  712 |                 sprintf( Number_Buffer , "%*d",len, number );   // 将 number 转换成字符串，便于显示
+      |                                           ~~^       ~~~~~~
+      |                                             |       |
+      |                                             int     int32_t {aka long int}
+      |                                           %*ld
+../Core/Src/lcd_spi_200.c: In function 'LCD_DisplayDecimals':
+../Core/Src/lcd_spi_200.c:749:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  749 |                 sprintf( Number_Buffer , "%0*.*lf",len,decs, decimals );        // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:749:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/lcd_spi_200.c:753:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  753 |                 sprintf( Number_Buffer , "%*.*lf",len,decs, decimals ); // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:753:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/spi.c: In function 'MX_SPI6_Init':
+../Core/Src/spi.c:39:9: error: 'LCD_SPI' undeclared (first use in this function)
+   39 |         LCD_SPI.Instance                                                                        = SPI6;                                                                                         //      使用SPI
+      |         ^~~~~~~
+../Core/Src/spi.c:39:9: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/spi.c: In function 'HAL_SPI_MspInit':
+../Core/Src/spi.c:72:28: warning: unused variable 'PeriphClkInitStruct' [-Wunused-variable]
+   72 |   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+      |                            ^~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/spi.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+13:00:52 **** Incremental Build of configuration Debug for project fasong ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/lcd_spi_200.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcd_spi_200.d" -MT"Core/Src/lcd_spi_200.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lcd_spi_200.o"
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+../Core/Src/spi.c: In function 'HAL_SPI_MspInit':
+../Core/Src/spi.c:72:28: warning: unused variable 'PeriphClkInitStruct' [-Wunused-variable]
+   72 |   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+      |                            ^~~~~~~~~~~~~~~~~~~
+../Core/Src/lcd_spi_200.c: In function 'LCD_DisplayNumber':
+../Core/Src/lcd_spi_200.c:707:17: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  707 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:26:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   25 | #include "spi.h"
+  +++ |+#include <stdio.h>
+   26 | extern SPI_HandleTypeDef hspi6;                 // SPI_HandleTypeDef 结构体变量
+../Core/Src/lcd_spi_200.c:707:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  707 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:707:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/lcd_spi_200.c:707:42: warning: '0' flag ignored with precision and '%d' gnu_printf format [-Wformat=]
+  707 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                                          ^~~~~~~
+../Core/Src/lcd_spi_200.c:707:47: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32_t' {aka 'long int'} [-Wformat=]
+  707 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                                           ~~~~^       ~~~~~~
+      |                                               |       |
+      |                                               int     int32_t {aka long int}
+      |                                           %0.*ld
+../Core/Src/lcd_spi_200.c:711:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  711 |                 sprintf( Number_Buffer , "%*d",len, number );   // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:711:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/lcd_spi_200.c:711:45: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32_t' {aka 'long int'} [-Wformat=]
+  711 |                 sprintf( Number_Buffer , "%*d",len, number );   // 将 number 转换成字符串，便于显示
+      |                                           ~~^       ~~~~~~
+      |                                             |       |
+      |                                             int     int32_t {aka long int}
+      |                                           %*ld
+../Core/Src/lcd_spi_200.c: In function 'LCD_DisplayDecimals':
+../Core/Src/lcd_spi_200.c:748:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  748 |                 sprintf( Number_Buffer , "%0*.*lf",len,decs, decimals );        // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:748:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/lcd_spi_200.c:752:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  752 |                 sprintf( Number_Buffer , "%*.*lf",len,decs, decimals ); // 将 number 转换成字符串，便于显示
+      |                 ^~~~~~~
+../Core/Src/lcd_spi_200.c:752:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+arm-none-eabi-gcc -o "fasong.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\11433\Desktop\target_vehicle_control code\fasong\fasong\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fasong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fasong.elf
+ 
+arm-none-eabi-size  fasong.elf 
+arm-none-eabi-objdump -h -S fasong.elf  > "fasong.list"
+   text	   data	    bss	    dec	    hex	filename
+  36888	    108	   2564	  39560	   9a88	fasong.elf
+Finished building: default.size.stdout
+ 
+Finished building: fasong.list
+ 
+13:01:27 **** Incremental Build of configuration Debug for project fasong ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/lcd_spi_200.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcd_spi_200.d" -MT"Core/Src/lcd_spi_200.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lcd_spi_200.o"
+../Core/Src/lcd_spi_200.c: In function 'LCD_DisplayNumber':
+../Core/Src/lcd_spi_200.c:708:42: warning: '0' flag ignored with precision and '%d' gnu_printf format [-Wformat=]
+  708 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                                          ^~~~~~~
+../Core/Src/lcd_spi_200.c:708:47: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32_t' {aka 'long int'} [-Wformat=]
+  708 |                 sprintf( Number_Buffer , "%0.*d",len, number ); // 将 number 转换成字符串，便于显示
+      |                                           ~~~~^       ~~~~~~
+      |                                               |       |
+      |                                               int     int32_t {aka long int}
+      |                                           %0.*ld
+../Core/Src/lcd_spi_200.c:712:45: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32_t' {aka 'long int'} [-Wformat=]
+  712 |                 sprintf( Number_Buffer , "%*d",len, number );   // 将 number 转换成字符串，便于显示
+      |                                           ~~^       ~~~~~~
+      |                                             |       |
+      |                                             int     int32_t {aka long int}
+      |                                           %*ld
+arm-none-eabi-gcc -o "fasong.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\11433\Desktop\target_vehicle_control code\fasong\fasong\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fasong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fasong.elf
+ 
+arm-none-eabi-size  fasong.elf 
+arm-none-eabi-objdump -h -S fasong.elf  > "fasong.list"
+   text	   data	    bss	    dec	    hex	filename
+  36888	    108	   2564	  39560	   9a88	fasong.elf
+Finished building: default.size.stdout
+ 
+Finished building: fasong.list
+ 
+13:03:17 **** Incremental Build of configuration Debug for project fasong ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "fasong.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\11433\Desktop\target_vehicle_control code\fasong\fasong\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fasong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: fasong.elf
+ 
+arm-none-eabi-size  fasong.elf 
+arm-none-eabi-objdump -h -S fasong.elf  > "fasong.list"
+   text	   data	    bss	    dec	    hex	filename
+  41280	     28	   4300	  45608	   b228	fasong.elf
+Finished building: default.size.stdout
+ 
+Finished building: fasong.list
+ 
