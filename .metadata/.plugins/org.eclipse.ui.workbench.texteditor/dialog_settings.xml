@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="true"/>
+	<list key="replacehistory">
+		<item value="HAL_Delay"/>
+	</list>
+	<list key="searchhistory">
+		<item value="PeriphCommonClock_Config"/>
+		<item value="led"/>
+		<item value="g_uart_handle"/>
+		<item value="delay_ms"/>
+		<item value="fputc"/>
+		<item value="hspi6"/>
+		<item value="int fputc"/>
+	</list>
+</section>
