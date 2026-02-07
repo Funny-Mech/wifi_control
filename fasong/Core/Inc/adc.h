@@ -44,7 +44,7 @@ void MX_ADC1_Init(void);
 void MX_ADC2_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+void Get_Chanel_1_2(void);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

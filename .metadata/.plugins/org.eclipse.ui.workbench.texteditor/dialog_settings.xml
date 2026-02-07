@@ -3,13 +3,23 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="true"/>
 	<list key="replacehistory">
+		<item value="huart4"/>
 		<item value="HAL_Delay"/>
+		<item value="HAL_DELAY"/>
 	</list>
 	<list key="searchhistory">
+		<item value="g_uart_handle"/>
+		<item value="ATK_MW8266D_UART_IRQn"/>
+		<item value="write"/>
+		<item value="UART4_IRQHandler"/>
+		<item value="ack"/>
+		<item value="ATK_MW8266D_RST"/>
+		<item value="ATK_MW8266D_RST_GPIO_PORT"/>
+		<item value="HAL_DELAY"/>
+		<item value="delay_ms"/>
+		<item value="sys_stm32_clock_init"/>
 		<item value="PeriphCommonClock_Config"/>
 		<item value="led"/>
-		<item value="g_uart_handle"/>
-		<item value="delay_ms"/>
 		<item value="fputc"/>
 		<item value="hspi6"/>
 		<item value="int fputc"/>

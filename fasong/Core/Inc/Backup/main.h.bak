@@ -59,6 +59,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define SW_Pin GPIO_PIN_1
 #define SW_GPIO_Port GPIOB
+#define RST_Pin GPIO_PIN_2
+#define RST_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

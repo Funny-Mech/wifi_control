@@ -1,0 +1,8 @@
+../Core/Src/sys.c:33:9:get_icahce_sta	1
+../Core/Src/sys.c:45:9:get_dcahce_sta	1
+../Core/Src/sys.c:58:6:sys_nvic_set_vector_table	1
+../Core/Src/sys.c:69:6:sys_wfi_set	1
+../Core/Src/sys.c:79:6:sys_intx_disable	1
+../Core/Src/sys.c:89:6:sys_intx_enable	1
+../Core/Src/sys.c:100:6:sys_msr_msp	1
+../Core/Src/sys.c:110:6:sys_cache_enable	5

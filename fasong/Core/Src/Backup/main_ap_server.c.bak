@@ -1,0 +1,87 @@
+#include "atk_mw8266d.h"
+#include <stdio.h>
+#include "main.h"
+
+/* --- AP 和服务器参数配置 --- */
+#define AP_SSID         "funny_wifi"    // 定义AP热点名称
+#define AP_PWD          "12345678"      // 定义AP热点密码
+#define AP_CH           "5"             // WiFi通道 (1-13)
+#define AP_ECN          "3"             // 加密方式 (0:OPEN, 2:WPA_PSK, 3:WPA2_PSK, 4:WPA_WPA2_PSK)
+#define SERVER_PORT     "8086"          // TCP服务器端口号
+
+/**
+ * @brief 模块A的主函数 - AP服务器模式
+ */
+void main_ap_server(void)
+{
+    uint8_t status;
+    char cmd_buf[128];
+
+
+    printf("模块 A (AP服务器) 启动中...\r\n");
+//    atk_mw8266d_uart_init(115200);
+//    atk_mw8266d_uart_printf("AT");
+//    HAL_Delay(500);
+//    atk_mw8266d_uart_printf("AT+CWMODE");
+//    HAL_Delay(500);
+//    atk_mw8266d_uart_printf("AT+CWSAP=\"ATK-ESP8266\",\"12345678\",1,4");
+//    HAL_Delay(500);
+//    atk_mw8266d_uart_printf("AT+CIPMUX=1");
+    // 1. 初始化ATK-MW8266D模块
+    if (atk_mw8266d_init(115200) != ATK_MW8266D_EOK)
+    {
+        printf("WiFi模块初始化失败\r\n");
+        return;
+    }
+    printf("WiFi模块初始化成功\r\n");
+
+    // 2. 设置为AP+Station模式
+    if (atk_mw8266d_set_mode(3) != ATK_MW8266D_EOK)
+    {
+        printf("设置AP+Station模式失败\r\n");
+        return;
+    }
+    printf("AP+Station模式设置成功\r\n");
+
+    // 3. 配置AP参数 (SSID, 密码等)
+    sprintf(cmd_buf, "AT+CWSAP=\"%s\",\"%s\",%s,%s", AP_SSID, AP_PWD, AP_CH, AP_ECN);
+    if (atk_mw8266d_send_at_cmd(cmd_buf, "OK", 2000) != ATK_MW8266D_EOK)
+    {
+        printf("配置AP参数失败\r\n");
+        return;
+    }
+    printf("AP配置成功, SSID: %s\r\n", AP_SSID);
+
+    // 4. 允许多连接
+    if (atk_mw8266d_send_at_cmd("AT+CIPMUX=1", "OK", 500) != ATK_MW8266D_EOK)
+    {
+        printf("允许多连接失败\r\n");
+        return;
+    }
+    printf("允许多连接设置成功\r\n");
+
+    // 5. 创建TCP服务器
+    sprintf(cmd_buf, "AT+CIPSERVER=1,%s", SERVER_PORT);
+    if (atk_mw8266d_send_at_cmd(cmd_buf, "OK", 1000) != ATK_MW8266D_EOK)
+    {
+        printf("创建TCP服务器失败\r\n");
+        return;
+    }
+    printf("TCP服务器已在端口 %s 上启动，等待客户端连接...\r\n", SERVER_PORT);
+
+    // 6. 进入透传模式 (当有客户端连接后，AT+CIPSEND后模块会自动进入)
+    if (atk_mw8266d_enter_unvarnished() != ATK_MW8266D_EOK)
+    {
+        printf("进入透传模式失败\r\n");
+        return;
+    }
+    printf("已进入透传模式，可以开始数据通信\r\n");
+
+
+        // 在透传模式下，你可以直接调用 atk_mw8266d_uart_printf() 发送数据
+        // 例如: atk_mw8266d_uart_printf("Hello from AP Server!\r\n");
+        // delay_ms(1000);
+
+        // 接收到的数据由 `ATK_MW8266D_UART_IRQHandler` 中断服务程序处理
+        // 你可以在主循环中通过 `atk_mw8266d_uart_rx_get_frame()` 来获取并处理接收到的数据
+}

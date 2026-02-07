@@ -1,5 +1,5 @@
 ################################################################################
-# Automatically-generated file. Do not edit!
+# 自动生成的文件。不要编辑！
 # Toolchain: GNU Tools for STM32 (13.3.rel1)
 ################################################################################
 
@@ -7,7 +7,7 @@
 
 RM := rm -rf
 
-# All of the sources participating in the build are defined here
+# 此处定义了参与生成的所有源
 -include sources.mk
 -include Drivers/STM32H7xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
@@ -39,7 +39,7 @@ BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
-# Add inputs and outputs from these tool invocations to the build variables 
+# 将这些工具调用的输入和输出添加到构建变量 
 EXECUTABLES += \
 fasong.elf \
 
@@ -53,29 +53,29 @@ OBJDUMP_LIST += \
 fasong.list \
 
 
-# All Target
+# 所有目标
 all: main-build
 
-# Main-build Target
+# 主构建目标
 main-build: fasong.elf secondary-outputs
 
-# Tool invocations
+# 工具调用
 fasong.elf fasong.map: $(OBJS) $(USER_OBJS) C:\Users\11433\Desktop\target_vehicle_control\ code\fasong\fasong\STM32H723ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "fasong.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\11433\Desktop\target_vehicle_control code\fasong\fasong\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fasong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-	@echo 'Finished building target: $@'
+	arm-none-eabi-gcc -o "fasong.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\11433\Desktop\target_vehicle_control code\fasong\fasong\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fasong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+	@echo '已结束构建目标： $@'
 	@echo ' '
 
 default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-size  $(EXECUTABLES)
-	@echo 'Finished building: $@'
+	@echo '已结束构建： $@'
 	@echo ' '
 
 fasong.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "fasong.list"
-	@echo 'Finished building: $@'
+	@echo '已结束构建： $@'
 	@echo ' '
 
-# Other Targets
+# 其他目标
 clean:
 	-$(RM) default.size.stdout fasong.elf fasong.list fasong.map
 	-@echo ' '

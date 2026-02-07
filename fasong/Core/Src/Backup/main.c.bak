@@ -22,10 +22,11 @@
 #include "spi.h"
 #include "usart.h"
 #include "gpio.h"
+#include "main_ap_server.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "lcd_spi_200.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -35,7 +36,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+int32_t X=0;
+int32_t Y=0;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -103,20 +105,50 @@ int main(void)
   MX_UART4_Init();
   MX_UART5_Init();
   /* USER CODE BEGIN 2 */
-
+  SPI_LCD_Init();
+  main_ap_server();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  printf("this is test");
+	  /* Infinite loop */
+	  /* USER CODE BEGIN WHILE */
+
+		  // 启动ADC1进行单次转换
+		         HAL_ADC_Start(&hadc1);
+		         // 等待转换完成
+		         if (HAL_ADC_PollForConversion(&hadc1, 10) == HAL_OK)
+		         {
+		             X = HAL_ADC_GetValue(&hadc1);
+		         }
+		         // 停止ADC1（好习惯）
+		         HAL_ADC_Stop(&hadc1);
+
+
+		         // 启动ADC2进行单次转换
+		         HAL_ADC_Start(&hadc2);
+		         // 等待转换完成
+		         if (HAL_ADC_PollForConversion(&hadc2, 10) == HAL_OK)
+		         {
+		             Y = HAL_ADC_GetValue(&hadc2);
+		         }
+		         // 停止ADC2（好习惯）
+		         HAL_ADC_Stop(&hadc2);
+		         LCD_DisplayNumber(1, 1, X, 3);
+		         LCD_DisplayNumber(1, 40, Y, 3);
+		         HAL_Delay(200);
+
+	  }
+	  /* USER CODE END 3 */
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
-}
+
 
 /**
   * @brief System Clock Configuration

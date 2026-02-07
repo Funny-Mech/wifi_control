@@ -21,7 +21,8 @@
 #include "adc.h"
 
 /* USER CODE BEGIN 0 */
-
+extern int32_t X;
+extern int32_t Y;
 /* USER CODE END 0 */
 
 ADC_HandleTypeDef hadc1;
@@ -50,7 +51,7 @@ void MX_ADC1_Init(void)
   hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
   hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc1.Init.LowPowerAutoWait = DISABLE;
-  hadc1.Init.ContinuousConvMode = ENABLE;
+  hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.NbrOfConversion = 1;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
@@ -113,7 +114,7 @@ void MX_ADC2_Init(void)
   hadc2.Init.ScanConvMode = ADC_SCAN_DISABLE;
   hadc2.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc2.Init.LowPowerAutoWait = DISABLE;
-  hadc2.Init.ContinuousConvMode = ENABLE;
+  hadc2.Init.ContinuousConvMode = DISABLE;
   hadc2.Init.NbrOfConversion = 1;
   hadc2.Init.DiscontinuousConvMode = DISABLE;
   hadc2.Init.ExternalTrigConv = ADC_SOFTWARE_START;
@@ -270,5 +271,31 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
 }
 
 /* USER CODE BEGIN 1 */
+void Get_Chanel_1_2(void)
+{
+	 	HAL_ADC_Start(&hadc1);
+       // 等待转换完成
+	 	if (HAL_ADC_PollForConversion(&hadc1, 10) == HAL_OK)
+       {
+	      X = (int32_t)HAL_ADC_GetValue(&hadc1);
+	   }
+	     // 停止ADC1（好习惯）
+     HAL_ADC_Stop(&hadc1);
 
+		// 启动ADC2进行单次转换
+	    HAL_ADC_Start(&hadc2);
+	    // 等待转换完成
+	if (HAL_ADC_PollForConversion(&hadc2, 10) == HAL_OK)
+	  {
+		Y = (int32_t)HAL_ADC_GetValue(&hadc2);
+	  }
+	  // 停止ADC2（好习惯）
+	   HAL_ADC_Stop(&hadc2);
+
+	    X=X-120;
+	    Y=Y-120;
+		if(X>=-5 && X<=5){X=0;}
+		if(Y>=-5 && Y<=5){Y=0;}
+
+}
 /* USER CODE END 1 */

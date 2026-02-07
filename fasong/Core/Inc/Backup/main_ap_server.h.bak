@@ -1,0 +1,5 @@
+#ifndef __MAIN_AP_SERVER_H__
+#define __MAIN_AP_SERVER_H__
+
+void main_ap_server(void);
+#endif

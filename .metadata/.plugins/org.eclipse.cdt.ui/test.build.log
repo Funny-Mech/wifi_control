@@ -1,0 +1,17 @@
+22:43:43 **** 项目test配置Debug的增量构建 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc -o "test.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\11433\Desktop\target_vehicle_control code\remote_control(F103)\test\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+已结束构建目标： test.elf
+ 
+arm-none-eabi-size  test.elf 
+arm-none-eabi-objdump -h -S test.elf  > "test.list"
+   text	   data	    bss	    dec	    hex	filename
+  34304	    108	   2404	  36816	   8fd0	test.elf
+已结束构建： default.size.stdout
+ 
+已结束构建： test.list
+ 
+
+22:43:44 构建完成。 0错误，0警告。(使用1s.9ms)
+

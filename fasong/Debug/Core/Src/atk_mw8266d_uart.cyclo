@@ -1,0 +1,6 @@
+../Core/Src/atk_mw8266d_uart.c:48:6:atk_mw8266d_uart_printf	1
+../Core/Src/atk_mw8266d_uart.c:66:6:atk_mw8266d_uart_rx_restart	1
+../Core/Src/atk_mw8266d_uart.c:78:10:atk_mw8266d_uart_rx_get_frame	2
+../Core/Src/atk_mw8266d_uart.c:97:10:atk_mw8266d_uart_rx_get_frame_len	2
+../Core/Src/atk_mw8266d_uart.c:112:6:HAL_UARTEx_RxEventCallback	2
+../Core/Src/atk_mw8266d_uart.c:125:6:UART4_IRQHandler	1
