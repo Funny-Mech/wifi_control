@@ -68,9 +68,8 @@ extern struct
 void SystemClock_Config(void);
 void PeriphCommonClock_Config(void);
 static void MPU_Config(void);
-void WIFI_Init(void);
 /* USER CODE BEGIN PFP */
-
+void WIFI_Init(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -130,8 +129,8 @@ int main(void)
 	  /* Infinite loop */
 	  /* USER CODE BEGIN WHILE */
 	  Get_Chanel_1_2();
-
-		 HAL_Delay(100);
+	  atk_mw8266d_uart_printf("%d%d%d",X,Y,HAL_GPIO_ReadPin(SW_GPIO_Port,SW_Pin));
+	  HAL_Delay(1000);
  }
 
     /* USER CODE END WHILE */

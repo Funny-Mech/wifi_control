@@ -292,10 +292,6 @@ void Get_Chanel_1_2(void)
 	  // 停止ADC2（好习惯）
 	   HAL_ADC_Stop(&hadc2);
 
-	    X=X-120;
-	    Y=Y-120;
-		if(X>=-5 && X<=5){X=0;}
-		if(Y>=-5 && Y<=5){Y=0;}
 
 }
 /* USER CODE END 1 */
